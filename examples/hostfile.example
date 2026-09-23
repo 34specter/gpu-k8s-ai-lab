@@ -1,0 +1,4 @@
+# 双节点示例 hostfile
+# Replace placeholders locally; do not commit real addresses.
+<node-a-hostname> slots=<gpu-count> \
+<node-b-hostname> slots=<gpu-count>

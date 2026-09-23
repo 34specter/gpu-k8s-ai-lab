@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Example only. Supply the actual endpoint and token through local variables.
+set -euo pipefail
+
+API_BASE="${API_BASE:-https://<api-hostname>/v1}"
+MODEL="${MODEL:-<model-name>}"
+
+curl --fail-with-body --silent --show-error \
+  "${API_BASE}/chat/completions" \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer ${OPENAI_API_KEY:?set OPENAI_API_KEY locally}" \
+  -d "{\"model\":\"${MODEL}\",\"messages\":[{\"role\":\"user\",\"content\":\"health check\"}],\"max_tokens\":8}"

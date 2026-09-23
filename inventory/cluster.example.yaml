@@ -1,0 +1,23 @@
+# 本地环境清单模板
+# 复制为 cluster.yaml 后填写；cluster.yaml 默认不会提交。
+cluster:
+  name: ncp-ain-lab
+  environment: two-node-experiment
+  kubernetes_version: v1.28.2
+nodes:
+  - name: node-a
+    role: control-plane
+    management_address: <node-a-management-ip>
+    gpu:
+      model: <gpu-model>
+      count: 1
+  - name: node-b
+    role: worker
+    management_address: <node-b-management-ip>
+    gpu:
+      model: <gpu-model>
+      count: 1
+runtime:
+  containerd: 1.7.x
+  gpu_toolkit: <toolkit-version>
+  harbor_registry: <harbor-hostname>

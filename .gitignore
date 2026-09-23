@@ -1,0 +1,48 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.local.yaml
+*.local.yml
+inventory/cluster.yaml
+inventory/topology.yaml
+**/*secret*.yaml
+**/*secret*.yml
+**/*.key
+**/*.pem
+**/*.crt
+**/*.csr
+
+# Models and generated artifacts
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+artifacts/*
+!artifacts/.gitkeep
+models/
+checkpoints/
+outputs/
+
+# Logs and runtime output
+*.log
+*.out
+*.err
+logs/
+
+# Python and build output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Kubernetes/generated local files
+kubeconfig*
+*-join-command.sh
+*.generated.yaml
+*.generated.yml

@@ -1,0 +1,32 @@
+# 网络拓扑模板
+# 仅描述链路类型和待填字段，不提交真实地址。
+links:
+  management:
+    source: node-a
+    target: node-b
+    interface_source: <management-interface-a>
+    interface_target: <management-interface-b>
+    address_source: <node-a-management-ip>
+    address_target: <node-b-management-ip>
+  roce:
+    source: node-a
+    target: node-b
+    media: 25GbE
+    protocol: RoCEv2
+    interface_source: <roce-interface-a>
+    interface_target: <roce-interface-b>
+    gid_index: <gid-index>
+  infiniband:
+    source: node-a
+    target: node-b
+    media: 100G
+    protocol: InfiniBand
+    device_source: <ib-device-a>
+    device_target: <ib-device-b>
+  storage:
+    protocol: NVMe-oF over IB
+    endpoint: <nvme-target>
+    mount_path: <model-mount-path>
+validation:
+  rdma_bandwidth_target_gbps: 23.17
+  notes: "Replace targets with measured values and attach evidence."
