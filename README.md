@@ -56,12 +56,13 @@ Linux 主机
 
 1. 阅读 [`docs/00-project-scope.md`](docs/00-project-scope.md)，确认项目边界和记录规则。
 2. 根据 [`inventory/README.md`](inventory/README.md) 和配置模板整理本地实验环境信息。
-3. 按主机前置条件、containerd、Kubernetes 和 GPU runtime 顺序完成基础环境准备。
-4. 按 [`docs/04-roce-ib-network.md`](docs/04-roce-ib-network.md) 验证网络、RDMA 和存储链路。
-5. 按 [`docs/05-nccl-validation.md`](docs/05-nccl-validation.md) 验证跨节点集合通信。
-6. 按 [`docs/06-distributed-training.md`](docs/06-distributed-training.md) 验证 DDP/LoRA 训练任务。
-7. 按 [`docs/07-kuberay-vllm-serving.md`](docs/07-kuberay-vllm-serving.md) 验证多卡推理服务。
-8. 使用 [`docs/08-acceptance-checklist.md`](docs/08-acceptance-checklist.md) 汇总每一层的结果和证据。
+3. 按 [`docs/01-host-prerequisites.md`](docs/01-host-prerequisites.md)、[`docs/02-network-foundation-dns.md`](docs/02-network-foundation-dns.md) 和 [`docs/03-containerd-harbor.md`](docs/03-containerd-harbor.md) 完成主机、内网 DNS、containerd 和 Harbor 信任配置。
+4. 按 [`docs/04-kubernetes-bootstrap.md`](docs/04-kubernetes-bootstrap.md) 和 [`docs/05-gpu-runtime.md`](docs/05-gpu-runtime.md) 完成 Kubernetes 与 GPU runtime 前置检查。
+5. 按 [`docs/06-roce-ib-network.md`](docs/06-roce-ib-network.md) 验证网络、RDMA 和存储链路。
+6. 按 [`docs/07-nccl-validation.md`](docs/07-nccl-validation.md) 验证跨节点集合通信。
+7. 按 [`docs/08-distributed-training.md`](docs/08-distributed-training.md) 验证 DDP/LoRA 训练任务。
+8. 按 [`docs/09-kuberay-vllm-serving.md`](docs/09-kuberay-vllm-serving.md) 验证多卡推理服务。
+9. 使用 [`docs/10-acceptance-checklist.md`](docs/10-acceptance-checklist.md) 汇总每一层的结果和证据。
 
 ## 配置方式
 
